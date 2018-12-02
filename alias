@@ -1,0 +1,22 @@
+#docker-compose aliases
+dc='docker-compose'
+dcb='docker-compose build'
+dce='docker-compose exec'
+dck='docker-compose kill'
+dcp='docker-compose pull'
+dcr='docker-compose restart'
+dcs='docker-compose stop'
+dcu='docker-compose up'
+dcud='docker-compose up -d'
+dcrm='docker-compose rm'
+dcps='docker-compose ps'
+dckrm='docker-compose kill && docker-compose rm'
+
+#remove all docker containers
+drma='docker rm $(docker ps -a -q) -f'
+
+#remove all docker images
+drmia='docker rmi $(docker images -q) -f'
+
+#remove unused docker images
+drmiu='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
